@@ -1,0 +1,26 @@
+<div class="container ">
+    <div class="row">
+            @for (product of products; track $index) {
+        <div class="col-md-6 col-lg-4 g-4  "  >
+
+                <div class="card h-100" >
+                    <img [src]="product.image" class="p-3" height="300px" alt="{{product.title}}">
+                    <div class="card-body">
+                        <h2>{{product.title.split(" ").slice(0,2).join(" ")}}</h2>
+                        <p >{{product.description.split(" ").slice(0,12).join(" ")}}</p>
+                        <div class="d-flex justify-content-between text-danger  ">
+                        <span>{{product.price}}EGP</span>
+
+                        <span>{{product.rating.rate}}</span>
+
+                        </div>
+                    </div>
+                   
+                </div>
+    </div>
+
+            }
+           
+        </div>
+
+</div>
